@@ -1,6 +1,5 @@
 .header {
   max-width: 1200px;
-  padding: 20px 10px;
   padding: 20px 60px;
   margin: 0 auto;
   display: flex;
@@ -18,7 +17,7 @@
   display: flex;
   gap: 40px;
   list-style: none;
-  padding: 0; /* Remove o espaçamento interno desnecessário */
+  padding: 0;
 }
 
 .header-menu a {
@@ -28,16 +27,22 @@
   font-size: 1.2rem;
 }
 
+/* Fundo cobre toda a largura da tela */
 .introducao {
   background-color: #02417a;
+}
+
+/* Conteúdo centralizado com max-width */
+.introducao-conteudo {
   max-width: 1200px;
-  padding: 40px 60px;
   margin: 0 auto;
+  padding: 40px 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 100px;
+  gap: 60px;
   align-items: center;
 }
+
 .introducao h1 {
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -53,6 +58,9 @@
 }
 .intro-imagem {
   border-radius: 4px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .cta-buttonintroducao {
@@ -70,14 +78,19 @@
   cursor: pointer;
 }
 .cta-buttonintroducao:hover {
-  transform: translateY(-3px); /* sobe levemente */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* sombra premium */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
+
+/* Fundo cobre toda a largura — inner elements ficam centralizados */
+.cards {
+  background-color: #01203c;
+}
+
 .subtitulo {
   background-color: #01203c;
   max-width: 1200px;
-  padding: 70px 30px;
-  padding-bottom: 0px;
+  padding: 70px 30px 0 30px;
   margin: 0 auto;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -91,13 +104,11 @@
   padding: 70px 30px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .cards-container img {
-  /* Define a base para 4 colunas em telas grandes */
-  /* flex-grow, flex-shrink, flex-basis */
   flex: 1 1 calc(25% - 16px);
   min-width: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -160,61 +171,22 @@
 
 .carrossel p a:hover {
   text-decoration: none;
-  transform: translateY(-3px); /* sobe levemente */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2); /* sombra premium */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos para telas médias (2 colunas) */
 @media (max-width: 950px) {
   .cards-container img {
-    /* Cada item ocupa quase 50% para formar 2 colunas */
     flex-basis: calc(50% - 10px);
   }
 }
 
-/* Estilos para telas menores (Responsivo) */
-@media (max-width: 800px) {
-  .header {
-    flex-direction: column; /* Empilha o logo e o menu */
-    align-items: center; /* Centraliza os itens empilhados */
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .introducao {
-    grid-template-columns: 1fr; /* Muda o grid para uma única coluna */
-    gap: 40px;
-    padding: 40px 20px;
-  }
-
-  .introducao h1 {
-    font-size: 2rem;
-  }
-
-  .introducao p {
-    font-size: 1.25rem;
-  }
-
-  .subtitulo {
-    font-size: 1.5rem;
-  }
-
-  .cards-container {
-    padding: 0 20px 20px 20px;
-  }
-
-  .cards-container img {
-    flex-basis: 100%; /* Garante que o card ocupe 100% da largura */
-  }
-
-  .carrossel .subtitulo {
-    font-size: 1.7rem;
-  }
-
-  .swiper {
-    padding: 0 20px; /* Reduz o padding lateral no mobile */
-  }
+.quemsomos {
+  background-color: #9fcce2;
+  padding-bottom: 60px;
 }
+
 .quemsomos h2 {
   background-color: #9fcce2;
   max-width: 1200px;
@@ -224,10 +196,6 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2rem;
   color: #01203c;
-}
-.quemsomos {
-  background-color: #9fcce2;
-  padding-bottom: 60px;
 }
 
 .quemsomos-conteudo {
@@ -268,15 +236,15 @@
   flex: 1;
 }
 .socio-texto p {
-  border-left: 3px solid #f04138; /* cor e espessura da faixa */
-  padding-left: 15px; /* espaço entre a faixa e o texto */
+  border-left: 3px solid #f04138;
+  padding-left: 15px;
   font-family: Arial, Helvetica, sans-serif;
   margin: 30px;
   font-size: 1rem;
 }
 .socios-container img {
   display: block;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
 }
 .socio-icones {
   display: flex;
@@ -290,12 +258,10 @@
   text-align: center;
   background-color: #f0f7fa;
   padding: 20px 60px;
-  margin: 0 auto;
   justify-content: space-between;
   align-items: flex-end;
 }
 .conversa-gratuita h2 {
-  background-color: #f0f7fa;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.8rem;
@@ -303,7 +269,6 @@
 }
 .cta-button {
   display: block;
-  margin: auto;
   width: fit-content;
   margin: 30px auto;
   padding: 20px 20px;
@@ -315,11 +280,10 @@
   border-radius: 4px;
   text-decoration: none;
 }
+
 /* ============================= */
 /*            FOOTER             */
 /* ============================= */
-
-/* ===== FOOTER ===== */
 
 .footer {
   background: #002037;
@@ -337,8 +301,6 @@
   gap: 40px;
   position: relative;
 }
-
-/* ===== COLUNAS ===== */
 
 .footer-col {
   flex: 1;
@@ -364,7 +326,6 @@
   opacity: 0.8;
 }
 
-/* ===== LISTA ===== */
 .footer-colmeio li {
   list-style: none;
   padding: 5px;
@@ -378,8 +339,6 @@
   color: #fff;
   text-decoration: none;
 }
-
-/* ===== CONTATO DIREITA ===== */
 
 .email {
   font-family: Arial, sans-serif;
@@ -400,28 +359,12 @@
   line-height: 18px;
 }
 
-/* ===== LINHA DIVISÓRIA ===== */
-
-/* ===== FEITO COM AMOR ===== */
-
 .feito {
   font-family: Arial, sans-serif;
   text-align: right;
   margin-top: 0px;
   font-size: 14px;
   opacity: 0.9;
-}
-
-/* ===== RESPONSIVO ===== */
-@media (max-width: 900px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-divider {
-    display: none;
-  }
 }
 
 .icon-link {
@@ -451,10 +394,11 @@
   color: #fff;
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: right; /* Alinhei no canto inferior direito */
+  text-align: right;
   margin-top: 10px;
   margin-right: 30px;
 }
+
 /* ================================
    RESPONSIVO GERAL
 ================================ */
@@ -462,7 +406,7 @@
 /* --- Até 1100px --- */
 @media (max-width: 1100px) {
   .header,
-  .introducao,
+  .introducao-conteudo,
   .subtitulo,
   .cards-container,
   .swiper,
@@ -490,7 +434,7 @@
   }
 
   /* INTRODUÇÃO */
-  .introducao {
+  .introducao-conteudo {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 40px 20px;
@@ -572,6 +516,17 @@
   }
 }
 
+/* --- Até 650px --- */
+@media (max-width: 650px) {
+  .introducao-conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-imagem {
+    display: none;
+  }
+}
+
 /* --- Até 600px (smartphones) --- */
 @media (max-width: 600px) {
   .introducao h1 {
@@ -589,28 +544,5 @@
   .quemsomos h2 {
     font-size: 1.7rem;
     padding: 30px 10px;
-  }
-}
-/* INTRODUÇÃO – texto + imagem lado a lado */
-.introducao {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 60px;
-}
-
-/* Estilo da imagem */
-.intro-imagem {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-@media (max-width: 650px) {
-  .introducao {
-    grid-template-columns: 1fr; /* Só o texto */
-  }
-
-  .intro-imagem {
-    display: none; /* Some no mobile */
   }
 }

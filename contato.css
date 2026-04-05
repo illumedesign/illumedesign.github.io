@@ -1,6 +1,5 @@
 .header {
   max-width: 1200px;
-  padding: 20px 10px;
   padding: 20px 60px;
   margin: 0 auto;
   display: flex;
@@ -13,7 +12,7 @@
   display: flex;
   gap: 40px;
   list-style: none;
-  padding: 0; /* Remove o espaçamento interno desnecessário */
+  padding: 0;
 }
 
 .header-menu a {
@@ -22,14 +21,23 @@
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+/* Fundo cobre toda a largura da tela */
 .introducao {
   background-color: #02417a;
-  max-width: 1200px;
-  padding: 30px 40px;
-  margin: 0 auto;
-  align-items: center;
-  width: 100%;
 }
+
+/* Conteúdo centralizado com max-width */
+.introducao-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
 .introducao h1 {
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -43,13 +51,6 @@
   font-size: 0.8rem;
   color: #fff;
 }
-
-.introducao-conteudo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
 .introducao img {
   max-width: 100%;
   height: auto;
@@ -57,21 +58,19 @@
 
 /* Área do formulário */
 .formulario {
-  background: #b2d5e6; /* COR DO FUNDO ATRÁS DO FORMULÁRIO */
-  padding: 60px 20px; /* espaço interno para não colar nas bordas */
+  background: #b2d5e6;
+  padding: 60px 20px;
 }
 
 .formulario form {
   max-width: 700px;
   width: 100%;
   margin: auto;
-  background: #ffffff; /* fundo branco do card */
+  background: #ffffff;
   padding: 50px;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
-
-/* Título */
 
 .formulario h1 {
   margin-top: 0px;
@@ -92,14 +91,13 @@
   font-weight: 600;
   text-align: center;
 }
-/* Agrupamento dos campos */
+
 .grupo {
   color: #01203c;
   margin-bottom: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Labels */
 .formulario label {
   display: block;
   font-weight: 600;
@@ -107,7 +105,6 @@
   color: #333;
 }
 
-/* Inputs e textarea */
 .formulario input,
 .formulario textarea {
   width: 100%;
@@ -120,20 +117,18 @@
   outline: none;
 }
 
-/* Efeito ao focar */
 .formulario input:focus,
 .formulario textarea:focus {
-  border-color: #f04138; /* Cor do destaque */
+  border-color: #f04138;
   box-shadow: 0 0 0 3px rgba(255, 106, 61, 0.15);
 }
 
-/* Botão */
 .btn-form {
-  display:block;
-  width: fit-content;       /* Botão fica do tamanho do texto */
-  text-decoration: none;       /* Remove sublinhado */
+  display: block;
+  width: fit-content;
+  text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 16px 24px;          /* Espaçamento interno */
+  padding: 16px 24px;
   font-size: 1.1rem;
   border: none;
   border-radius: 4px;
@@ -142,16 +137,16 @@
   cursor: pointer;
   font-weight: 700;
   text-align: center;
-  white-space: nowrap;         /* Mantém tudo em 1 linha */
+  white-space: nowrap;
   transition: 0.3s ease;
-  margin: 0 auto;    
+  margin: 0 auto;
 }
 
-/* Hover do botão */
 .btn-form:hover {
-   transform: translateY(-3px); /* sobe levemente */
-  box-shadow: 0 6px 14px rgba(0,0,0,0.2); /* sombra premium */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
+
 .footer {
   background: #002037;
   padding: 40px 20px 25px;
@@ -168,8 +163,6 @@
   gap: 40px;
   position: relative;
 }
-
-/* ===== COLUNAS ===== */
 
 .footer-col {
   flex: 1;
@@ -195,7 +188,6 @@
   opacity: 0.8;
 }
 
-/* ===== LISTA ===== */
 .footer-colmeio li {
   list-style: none;
   padding: 5px;
@@ -209,8 +201,6 @@
   color: #fff;
   text-decoration: none;
 }
-
-/* ===== CONTATO DIREITA ===== */
 
 .email {
   font-family: Arial, sans-serif;
@@ -231,30 +221,12 @@
   line-height: 18px;
 }
 
-/* ===== LINHA DIVISÓRIA ===== */
-
-
-
-/* ===== FEITO COM AMOR ===== */
-
 .feito {
   font-family: Arial, sans-serif;
   text-align: right;
   margin-top: 0px;
   font-size: 14px;
   opacity: 0.9;
-}
-
-/* ===== RESPONSIVO ===== */
-@media (max-width: 900px) {
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-divider {
-    display: none;
-  }
 }
 
 .icon-link {
@@ -284,17 +256,18 @@
   color: #fff;
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: right; /* Alinhei no canto inferior direito */
+  text-align: right;
   margin-top: 10px;
   margin-right: 30px;
 }
+
 /* HEADER RESPONSIVO */
 @media (max-width: 700px) {
   .header {
     flex-direction: column;
     gap: 20px;
     text-align: center;
-    padding: 20px 20px;
+    padding: 20px;
   }
 
   .header-menu {
@@ -313,6 +286,15 @@
     flex-direction: column;
     text-align: center;
     gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .introducao img {
+    margin: 0 auto;
+  }
+
+  .introducao h1 {
+    font-size: 1.5rem;
   }
 }
 
