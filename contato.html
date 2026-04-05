@@ -38,15 +38,20 @@
     <h1>Preencha rapidinho e logo entraremos em contato pra dar vida ao seu design.</h1>
     <h2>Responderemos em breve — sem spam, só boas ideias!</h2>
 
-    <form action="./">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="fb471efd-e49a-4562-9642-ac1fc6bb3329">
+      <input type="hidden" name="subject" value="Novo contato pelo site — Illume Design">
+      <input type="hidden" name="redirect" value="https://illumedesign.com.br/pedidoenviado.html">
+      <input type="checkbox" name="botcheck" style="display: none;">
+
       <div class="grupo">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" placeholder="Como você quer ser chamado?">
+        <input type="text" id="nome" name="nome" placeholder="Como você quer ser chamado?" required>
       </div>
 
       <div class="grupo">
         <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="contato@email.com">
+        <input type="email" id="email" name="email" placeholder="contato@email.com" required>
       </div>
 
       <div class="grupo">
@@ -56,10 +61,10 @@
 
       <div class="grupo">
         <label for="mensagem">Mensagem</label>
-        <textarea name="mensagem" id="mensagem" rows="5" placeholder="Conte-nos o que você precisa!"></textarea>
+        <textarea name="mensagem" id="mensagem" rows="5" placeholder="Conte-nos o que você precisa!" required></textarea>
       </div>
 
-      <a href="pedidoenviado.html" class="btn-form">QUERO MEU DESIGN AGORA</a>
+      <button type="submit" class="btn-form">QUERO MEU DESIGN AGORA</button>
     </form>
 
   </section>
